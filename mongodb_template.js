@@ -104,6 +104,14 @@ db.users.update(
 )
 
 
+//update image 
+db.movies.update(
+  { _id: ObjectId("601379e88db5020db9381745") },
+  { $set: { ImagePath: "https://m.media-amazon.com/images/M/MV5BMTA2NDYxOGYtYjU1Mi00Y2QzLTgxMTQtMWI1MGI0ZGQ5MmU4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UY268_CR0,0,182,268_AL_.jpg" } }
+)
+
+
+
 "_id" : ObjectId("6013773e8db5020db9381743")
 
 // //multiple conditions
@@ -114,7 +122,8 @@ db.users.update(
 
 
 mongoimport--uri mongodb + srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB --collection users --type JSON --file ./users.json
-mongoimport--uri mongodb + srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB --collection directors --type JSON --file ./directors.json
+mongoimport--uri mongodb + srv://dill337:4CovXh3bvoYIeBV2@pdcluster.e8sgt.mongodb.net/myFilmDB --collection movies --type JSON --file ./movies.json
+mongoimport--uri mongodb + srv://dill337:<PASSWORD>@pdcluster.e8sgt.mongodb.net/<DATABASE> --collection <COLLECTION> --type <FILETYPE> --file <FILENAME>
 
 // mongo "mongodb+srv://pdcluster.e8sgt.mongodb.net/myFilmDB" --username dill337
 // mongo "mongodb+srv://pdcluster.e8sgt.mongodb.net/<dbname>" --username dill337
